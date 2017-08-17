@@ -10,7 +10,7 @@ import './index.css';
 
 
 const fakeState = {
-  games: {'f': {id: 'f', name: "Fun Times", size: 3, words: ['yay', 'hooray', 'wooo'], playerCount: 4}},
+  games: {'f': {id: 'f', name: "Animals", size: 3, words: ['bear', 'penguin', 'frog', 'dog', 'cat', 'whale', 'seal', 'chicken', 'cow'], playerCount: 4}},
 };
 
 const store = createStore(reducers, fakeState);

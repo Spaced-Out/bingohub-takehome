@@ -10,15 +10,19 @@
 .nav {
   height: 60px;
   padding: 0 10px;
-  justify-content: space-between;
   align-items: center;
   background: #4a4a4a;
   color: white;
 }
 
 .nav h1 {
+  margin-left: 20px;
   font-size: 24px;
   font-weight: 400;
+}
+
+.nav > a {
+  margin-left: auto;
 }
 
 .nav a {
