@@ -1,0 +1,42 @@
+.creator {
+  padding: 40px;
+}
+
+.left-col {
+  flex-flow: column;
+  width: 250px;
+  margin-right: 20px;
+}
+
+.creator label {
+  flex-flow: column;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.creator input, .creator textarea, .creator select {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  margin-top: 10px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 0;
+}
+
+.creator textarea {
+  height: 60px;
+}
+
+.creator button {
+  align-self: flex-end;
+  width: 90px;
+  height: 30px;
+  border: 1px solid #bd10e0;
+  color: #bd10e0;
+}
+
+.creator button:hover {
+  background-color: #bd10e0;
+  color: white;
+}
+
