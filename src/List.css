@@ -1,0 +1,22 @@
+.games {
+  flex-flow: column;
+  max-width: 900px;
+  padding: 34px 20px;
+}
+
+.game {
+  display: inherit;
+  flex-flow: column;
+  margin-bottom: 20px;
+}
+
+.game-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.game-info {
+  font-size: 18px;
+  color: #9b9b9b;
+}
+

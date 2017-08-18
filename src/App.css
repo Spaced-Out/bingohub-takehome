@@ -1,0 +1,32 @@
+.app {
+  flex-flow: column;
+  flex: 1 0 0;
+}
+
+.nav-page {
+  flex-flow: column;
+}
+
+.nav {
+  height: 60px;
+  padding: 0 10px;
+  align-items: center;
+  background: #4a4a4a;
+  color: white;
+}
+
+.nav h1 {
+  margin-left: 20px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.nav > a {
+  margin-left: auto;
+}
+
+.nav a {
+  font-size: 24px;
+  cursor: pointer;
+}
+
