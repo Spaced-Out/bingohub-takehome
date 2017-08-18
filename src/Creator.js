@@ -4,8 +4,6 @@ import {connect} from 'react-redux';
 import fromPairs from 'lodash/fromPairs';
 import filter from 'lodash/filter';
 
-import {addGame} from './actions';
-
 import Nav from './Nav';
 
 import './Creator.css';
@@ -13,18 +11,7 @@ import './Creator.css';
 
 const mapDispatchToProps = dispatch => ({
   onSubmit(router, event) {
-    event.preventDefault();
-
-    const form = event.target;
-    const game = {
-      name: form.name.value,
-      size: parseInt(form.size.value, 10),
-      words: form.words.value.split(', '),
-      playerCount: parseInt(form.playerCount.value, 10),
-    };
-
-    dispatch(addGame(game));
-    router.push('/');
+    // TODO add game and navigate to its page
   },
 });
 

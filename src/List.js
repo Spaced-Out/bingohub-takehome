@@ -14,7 +14,7 @@ const mapStateToProps = state => ({
 const List = ({games}) => (
   <Nav>
     <div className="games">
-      { games.map(game => (
+      { games.forEach(game => (
         <Link className="game" to={`/${game.id}`} key={game.id}>
           <div className="game-name">{game.name}</div>
           <div className="game-info">
