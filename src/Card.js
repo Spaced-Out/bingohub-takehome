@@ -4,6 +4,12 @@ import chunk from 'lodash/chunk';
 
 import './Game.css';
 
+const classList = {
+  3: 'three',
+  4: 'four',
+  5: 'five',
+};
+
 const Card = ({size, words}) => {
   let totalSize = Math.pow(size, 2);
   let wordList = words.slice(0, totalSize);
@@ -23,7 +29,7 @@ const Card = ({size, words}) => {
     );
   });
   return (
-    <div className="card">
+    <div className={`card ${classList[size]}`}>
       {rows}    
     </div>
   );
