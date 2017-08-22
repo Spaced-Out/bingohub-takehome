@@ -12,6 +12,7 @@ const mapDispatchToProps = dispatch => ({
   onSubmit(router, event) {
     event.preventDefault();
     const game = serializeForm(event.target, { hash: true });
+    game.words = game.words.split(',');
     dispatch(addGame(game));
   },
 });
