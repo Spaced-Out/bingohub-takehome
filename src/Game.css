@@ -1,1 +1,40 @@
-/* TODO style the game cards page */
+.game-cards {
+  flex-wrap: wrap; 
+  width: 100vw;
+}
+
+.card {
+  width: 46vw;
+  margin: 2vw;
+  flex-wrap: wrap;
+  outline: 1px solid #4a4a4a;
+}
+
+.cell {
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: #4a4a4a;
+}
+
+.card.three .cell {
+  width: calc(46vw / 3);
+  height: calc(46vw / 3);
+}
+
+.card.four .cell {
+  width: calc(46vw / 4);
+  height: calc(46vw / 4);
+}
+
+.card.five .cell {
+  width: calc(46vw / 5);
+  height: calc(46vw / 5);
+}
+
+.row:nth-of-type(2n) .cell:nth-of-type(2n - 1),
+.row:nth-of-type(2n - 1) .cell:nth-of-type(2n) {
+  background-color: #4a4a4a;
+  color: white;
+}

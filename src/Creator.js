@@ -1,17 +1,19 @@
 import React from 'react';
 import {connect} from 'react-redux';
-
-import fromPairs from 'lodash/fromPairs';
-import filter from 'lodash/filter';
+import serializeForm from 'form-serialize';
 
 import Nav from './Nav';
 
-import './Creator.css';
+import {addGame} from './actions';
 
+import './Creator.css';
 
 const mapDispatchToProps = dispatch => ({
   onSubmit(router, event) {
-    // TODO add game and navigate to its page
+    event.preventDefault();
+    const game = serializeForm(event.target, { hash: true });
+    game.words = game.words.split(',');
+    dispatch(addGame(game));
   },
 });
 

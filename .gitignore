@@ -13,3 +13,10 @@ build
 .DS_Store
 .env
 npm-debug.log
+
+# mockup files
+mocks
+
+# swap files
+*.swp
+

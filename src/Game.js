@@ -1,12 +1,11 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import times from 'lodash/times';
-import chunk from 'lodash/chunk';
 
 import Nav from './Nav';
+import Card from './Card';
 
 import './Game.css';
-
 
 const mapStateToProps = (state, {params: {gameId}}) => ({
   game: state.games[gameId],
@@ -17,12 +16,10 @@ const Game = ({game}) => {
     return <div>Not Found</div>;
   }
 
-  const cards = generateCards(game);
-
   return (
     <Nav title={game.name}>
       <div className="game-cards">
-        { /* TODO show game cards */ }
+        {generateCards(game)}
       </div>
     </Nav>
   );
@@ -30,7 +27,8 @@ const Game = ({game}) => {
 
 export default connect(mapStateToProps)(Game);
 
-
 function generateCards({playerCount, size, words}) {
-  // TODO generate unique bingo cards for each player
+  return times(playerCount, (index) =>
+    <Card key={index} size={size} words={words} />
+  );
 }
