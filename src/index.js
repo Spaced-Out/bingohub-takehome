@@ -13,7 +13,11 @@ const fakeState = {
   games: {'f': {id: 'f', name: "Animals", size: 3, words: ['bear', 'penguin', 'frog', 'dog', 'cat', 'whale', 'seal', 'chicken', 'cow'], playerCount: 4}},
 };
 
-const store = createStore(reducers, fakeState);
+const store = createStore(
+  reducers,
+  fakeState,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+);
 
 ReactDOM.render(
   <Provider store={store}>
