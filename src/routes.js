@@ -1,17 +1,17 @@
-import React from 'react';
-import {Route, IndexRoute} from 'react-router';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import App from './App';
-import List from './List';
-import Creator from './Creator';
-import Game from './Game';
-
+import App from "./App";
+import List from "./List";
+import Creator from "./Creator";
+import Game from "./Game";
 
 export default (
-  <Route path="/" component={App}>
-    <IndexRoute component={List} />
-    <Route path="new" component={Creator} />
-    <Route path=":gameId" component={Game} />
-  </Route>
+  <Routes>
+    <Route path="/" element={<App />}>
+      <Route index element={<List />} />
+      <Route path="new" element={<Creator />} />
+      <Route path=":gameId" element={<Game />} />
+    </Route>
+  </Routes>
 );
-

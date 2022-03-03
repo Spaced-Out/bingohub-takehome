@@ -1,23 +1,40 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {Router, browserHistory} from 'react-router';
-import {Provider} from 'react-redux';
-import {createStore} from 'redux';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
 
-import reducers from './reducers';
-import routes from './routes';
-import './index.css';
-
+import reducers from "./reducers";
+import AppRoutes from "./routes";
+import "./index.css";
 
 const fakeState = {
-  games: {'f': {id: 'f', name: "Animals", size: 3, words: ['bear', 'penguin', 'frog', 'dog', 'cat', 'whale', 'seal', 'chicken', 'cow'], playerCount: 4}},
+  games: {
+    f: {
+      id: "f",
+      name: "Animals",
+      size: 3,
+      words: [
+        "bear",
+        "penguin",
+        "frog",
+        "dog",
+        "cat",
+        "whale",
+        "seal",
+        "chicken",
+        "cow",
+      ],
+      playerCount: 4,
+    },
+  },
 };
 
 const store = createStore(reducers, fakeState);
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router routes={routes} history={browserHistory} />
+    <BrowserRouter>{AppRoutes}</BrowserRouter>
   </Provider>,
-  document.getElementById('root')
+  document.getElementById("root")
 );

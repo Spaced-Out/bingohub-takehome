@@ -1,16 +1,13 @@
-import React from 'react';
-import {Link} from 'react-router';
+import React from "react";
+import { Link } from "react-router-dom";
 
-
-const Nav = ({children, title}) => (
+const Nav = ({ children, title }) => (
   <div className="nav-page">
     <nav className="nav">
-      { /* TODO add the logo */ }
+      {/* TODO add the logo */}
       <h1>
         <Link to="/">Games</Link>
-        { Boolean(title) &&
-          ` / ${title}`
-        }
+        {Boolean(title) && ` / ${title}`}
       </h1>
       <Link to="/new">+</Link>
     </nav>

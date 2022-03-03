@@ -1,18 +1,15 @@
-import React, { Component } from 'react';
-import {Link} from 'react-router';
-
-import './App.css';
-
+import React, { Component } from "react";
+import { Link, Outlet } from "react-router-dom";
+import "./App.css";
 
 class App extends Component {
   render() {
     return (
       <div className="app">
-        { this.props.children }
+        <Outlet />
       </div>
     );
   }
 }
 
 export default App;
-
