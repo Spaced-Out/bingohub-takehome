@@ -7,7 +7,8 @@ Note that BingoHub does not run games; it only creates them.
 
 
 ## Design Mock
-[https://www.dropbox.com/s/46rlbtkqo80avwf/Bingo2.sketch?dl=0](https://www.dropbox.com/s/46rlbtkqo80avwf/Bingo2.sketch?dl=0)
+https://www.figma.com/file/mtDFl5BXra0KDGEp8F5axw/Bingohub-Mocks?node-id=0%3A1
+
 
 ## Data
 A bingo game is generated with:
